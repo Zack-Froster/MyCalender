@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/back_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp">
+
+        <ImageButton
+            android:id="@+id/search_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@color/white"
+            android:src="@mipmap/left_arrow" />
+
+        <TextView
+            android:id="@+id/search_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="35dp"
+            android:text="搜索"
+            android:textColor="@color/black" />
+
+    </RelativeLayout>
+
+    <SearchView
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/back_bar" />
+
+    <RelativeLayout
+        android:id="@+id/lay_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/search_bar"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/select_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:text="全选"
+            android:textSize="16dp"
+            android:textColor="@color/text_check_selector" />
+
+        <TextView
+            android:id="@+id/select_none"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:text="取消"
+            android:textSize="16dp"
+            android:textColor="@color/text_check_selector" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/search_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_bar"
+        android:textColor="@color/black" />
+
+    <LinearLayout
+        android:id="@+id/lay_down"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:paddingBottom="10dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/delete_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:src="@mipmap/trash_can" />
+
+            <TextView
+                android:id="@+id/delete_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/delete_button"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/trash_can"
+                android:text="删除"
+                android:textColor="@color/edit_check_selector"
+                android:textSize="12dp" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

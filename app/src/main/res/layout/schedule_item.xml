@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/my_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:buttonTint="@color/blue"
+            android:clickable="true"
+            android:focusable="false"
+            android:checked="false"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_text_area"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/viewLine"
+                    android:layout_width="4dp"
+                    android:layout_height="14dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/short_line"
+                    android:layerType="software"
+                    android:radius="10dp" />
+
+                <TextView
+                    android:id="@+id/things"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:scrollbars="vertical"
+                    android:text="这里是日程信息"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/item_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:text="这里是时间"
+                android:textSize="10dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:clipChildren="false"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp">
+
+        <TextView
+            android:id="@+id/cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/text_check_selector"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:gravity="center"
+            android:text="编辑重要日"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/finish_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="完成"
+            android:textColor="@color/text_check_selector"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/things"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:enabled="true"
+        android:gravity="top"
+        android:minLines="8"
+        android:maxLines="10"
+        android:scrollbars="vertical"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/text_area"
+        android:hint="准备做什么？" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp">
+
+        <RadioGroup
+            android:id="@+id/statement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/event"
+                android:layout_width="wrap_content"
+                android:layout_height="39dp"
+                android:background="@drawable/event_background"
+                android:buttonTint="#8DBAF6"
+                android:tag="1"
+                android:text="要事"
+                android:textColor="#8DBAF6"
+                android:textSize="13dp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/leave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/leave_background"
+                android:buttonTint="#fba414"
+                android:tag="2"
+                android:text="请假"
+                android:textColor="#fba414"
+                android:textSize="13dp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/birthday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/birthday_background"
+                android:buttonTint="#FBAFA1"
+                android:tag="3"
+                android:text="生日"
+                android:textColor="#FBAFA1"
+                android:textSize="13dp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/meeting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/meeting_background"
+                android:buttonTint="#12a182"
+                android:tag="4"
+                android:text="会议"
+                android:textColor="#12a182"
+                android:textSize="13dp"
+                android:textStyle="bold" />
+        </RadioGroup>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/start_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="开始"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/start_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="开始时间"
+                android:textColor="@color/line_color" />
+        </RelativeLayout>
+
+        <top.defaults.view.DateTimePickerView
+            android:id="@+id/pickerViewStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:preferredMaxOffsetItemCount="3"
+            app:textSize="15dp"
+            app:type="dateTime"
+            app:minutesInterval="one"
+            app:curved="true"
+            android:background="@color/white"/>
+
+        <RelativeLayout
+            android:id="@+id/end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/end_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="结束"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/end_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="结束时间"
+                android:textColor="@color/line_color" />
+        </RelativeLayout>
+        <top.defaults.view.DateTimePickerView
+            android:id="@+id/pickerViewEnd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:preferredMaxOffsetItemCount="3"
+            app:textSize="15dp"
+            app:type="dateTime"
+            app:minutesInterval="one"
+            app:curved="true"
+            android:background="@color/white"/>
+    </LinearLayout>
+</LinearLayout>
